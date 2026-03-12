@@ -1,0 +1,7 @@
+telethon
+https://codeload.github.com/MiyukiKun/FastTelethonhelper/zip/refs/heads/main
+heroku3
+pymediainfo
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
