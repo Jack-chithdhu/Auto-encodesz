@@ -1,0 +1,30 @@
+services:
+  - type: worker
+    name: auto-encodes-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter          # Change to 'free' for free tier (will sleep after inactivity)
+    autoDeploy: true
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: BOT_USERNAME
+        sync: false
+      - key: BASE
+        sync: false
+      - key: FFMPEG
+        sync: false
+      - key: FFMPEGID
+        sync: false
+      - key: FFMPEGCMD
+        sync: false
+      - key: DESTINATION
+        sync: false
+      - key: HEROKU_API_KEY
+        sync: false
+      - key: HEROKU_APP_NAME
+        sync: false
