@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  auto-encodes-bot:
+    build: .
+    restart: unless-stopped
+    environment:
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - BOT_USERNAME=${BOT_USERNAME}
+      - BASE=${BASE}
+      - FFMPEG=${FFMPEG}
+      - FFMPEGID=${FFMPEGID}
+      - FFMPEGCMD=${FFMPEGCMD}
+      - DESTINATION=${DESTINATION}
+      - HEROKU_API_KEY=${HEROKU_API_KEY}
+      - HEROKU_APP_NAME=${HEROKU_APP_NAME}
+    volumes:
+      - ./downloads:/app/downloads   # Persist downloads folder across restarts
